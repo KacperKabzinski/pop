@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 51</title>
+<style>
+    .output {
+        white-space: pre;
+    }
+</style>
+</head>
+<body>
+
+<div class="output" id="output">
+</div>
+
+<script>
+    var repeat = parseInt(prompt("Ile razy powtórzyć napis?"));
+    var initials = prompt("Podaj swoje inicjały:");
+
+    var output = "";
+    for (var i = 1; i <= repeat; i++) {
+        for (var j = 1; j <= i; j++) {
+            output += "&nbsp;&nbsp;";
+        }
+        output += i + "_" + initials + "_" + i + "<br>";
+    }
+    document.getElementById("output").innerHTML = output;
+</script>
+
+</body>
+</html>

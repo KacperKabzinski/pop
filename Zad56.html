@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 56</title>
+</head>
+<body>
+
+<script>
+    // Funkcja sprawdzająca czy liczba jest liczbą pierwszą
+    function czyLiczbaPierwsza(liczba) {
+        if (liczba < 2) {
+            return false;
+        }
+        for (var i = 2; i <= Math.sqrt(liczba); i++) {
+            if (liczba % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Szukanie 40 liczb pierwszych z użyciem wzoru
+    var pierwsze = [];
+    for (var i = 0; i < 40; i++) {
+        var wynik = Math.pow(i, 2) + i + 41;
+        if (czyLiczbaPierwsza(wynik)) {
+            pierwsze.push(wynik);
+        }
+    }
+
+    // Wyświetlanie liczb pierwszych po 5 na linię
+    document.write("<h2>Liczby pierwsze wyznaczone przez wzór:</h2>");
+    var linie = Math.ceil(pierwsze.length / 5);
+    for (var i = 0; i < linie; i++) {
+        for (var j = 0; j < 5; j++) {
+            var index = i * 5 + j;
+            if (index < pierwsze.length) {
+                document.write("i=" + index + " w(" + index + ")=" + pierwsze[index] + "<br>");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+
+</body>
+</html>

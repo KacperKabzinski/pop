@@ -1,0 +1,44 @@
+<html>
+<head>
+        
+<p> Kabziński <br> <textarea id="story" name="story"
+ rows="30" cols="60">
+      
+ 
+
+ <!DOCTYPE html>
+ <html lang="pl">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Wypisywanie liczb parzystych</title>
+ </head>
+ <body>
+     <h1>Wypisywanie liczb parzystych</h1>
+     <button onclick="wypiszParzyste()">Wypisz liczby parzyste</button>
+ 
+     <script>
+         function wypiszParzyste() {
+            
+             let koniec_petli_kab = prompt("Podaj liczbę, do której chcesz wyświetlić parzyste liczby:");
+ 
+           
+             koniec_petli_kab = parseInt(koniec_petli_kab);
+ 
+             
+             if (isNaN(koniec_petli_kab) || koniec_petli_kab < 2) {
+                 alert("Podana wartość jest niepoprawna. Proszę podać liczbę większą lub równą 2.");
+             } else {
+                 
+                 for (let i_kab = 2; i_kab <= koniec_petli_kab; i_kab += 2) {
+                     console.log(i_kab);
+                 }
+             }
+         }
+     </script>
+ </body>
+ </html>
+ 
+   
+      </textarea></body>
+            </html> </p>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 53</title>
+<style>
+    body {
+        font-family: monospace;
+    }
+</style>
+</head>
+<body>
+
+<script>
+    
+    var a_kab = prompt("Podaj wymiar a:");
+    var b_kab = prompt("Podaj wymiar b:");
+
+   
+    var prostokat = "";
+   
+    for (var i = 0; i < a_kab; i++) {
+        prostokat += "*";
+    }
+    prostokat += "<br>";
+
+   
+    for (var i = 0; i < b_kab - 2; i++) {
+        var wiersz_kab = "*";
+        for (var j = 0; j < a_kab - 2; j++) {
+            wiersz_kab += "&nbsp;&nbsp;";
+        }
+        wiersz_kab += "*<br>";
+        prostokat += wiersz_kab;
+    }
+
+  
+    for (var i = 0; i < a_kab; i++) {
+        prostokat += "*";
+    }
+    prostokat += "<br>";
+
+   
+    document.write(prostokat);
+</script>
+
+</body>
+</html>

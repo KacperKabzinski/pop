@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 54</title>
+<style>
+    body {
+        font-family: monospace;
+    }
+</style>
+</head>
+<body>
+
+<script>
+ 
+    var imie = prompt("Podaj imię:");
+    var nazwisko = prompt("Podaj nazwisko:");
+
+    
+    var a = (nazwisko.length % 4) + 5;
+    var b = (imie.length % 6) + 20;
+
+  
+    var prostokat = "";
+   
+    for (var i = 0; i < a; i++) {
+        prostokat += "*";
+    }
+    prostokat += "<br>";
+
+   
+    for (var i = 0; i < b - 2; i++) {
+        prostokat += "*";
+        for (var j = 0; j < a - 2; j++) {
+            prostokat += "&nbsp;&nbsp;";
+        }
+        prostokat += "*<br>";
+    }
+
+    
+    for (var i = 0; i < a; i++) {
+        prostokat += "*";
+    }
+    prostokat += "<br>";
+
+    document.write(prostokat);
+</script>
+
+</body>
+</html>

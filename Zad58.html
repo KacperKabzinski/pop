@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 58</title>
+</head>
+<body>
+<div style="color: red; font-size: 18px;">
+<script language="Javascript">
+var x = prompt("Podaj pierwszą liczbę:", "");
+var y = prompt("Podaj drugą liczbę:", "");
+var liczba1_Kab = parseInt(x);
+var liczba2_Kab = parseInt(y);
+
+if (liczba1_Kab === liczba2_Kab) {
+    alert("Pierwsza liczba jest równa drugiej. Brak obliczeń.");
+} else {
+    document.write("<div style='color: green;'>");
+    if (liczba1_Kab < liczba2_Kab) {
+        for (var i = liczba1_Kab + 1; i < liczba2_Kab; i++) {
+            if (i % 2 !== 0) {
+                document.write(i + "<br>");
+            }
+        }
+    } else {
+        document.write("<div style='color: blue; font-size: 9px;'>");
+        for (var j = liczba1_Kab - 1; j > liczba2_Kab; j--) {
+            if (j % 2 !== 0) {
+                document.write(j + "<br>");
+            }
+        }
+    }
+    document.write("</div>");
+}
+</script>
+</div>
+</body>
+</html>
